@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+const Koa = require('koa')
+const path = require('path')
+const args = require('args')
+const detect = require('detect-port')
+const csv_serve = require('koa-csv')
+const { options, examples } = require('./args')
+
+
+args.options(options)
+args.examples(examples)
+const flags = args.parse(process.argv)
+const [ dir ] = args.sub
+let rootDir = process.cwd()
+if (dir) {
+    rootDir = path.resolve(process.cwd(), dir)
+}
+
+const { port } = flags
+detect(port).then(async open => {
+    const app = new Koa()
+    app.use(csv_serve(rootDir, flags))
+    console.log('listening port ' + port)
+    app.listen(port)
+})

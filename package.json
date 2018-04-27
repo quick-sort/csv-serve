@@ -1,0 +1,35 @@
+{
+    "name": "csv-serve",
+    "version": "1.0.0",
+    "description": "CSV serving as json API server",
+    "main": "index.js",
+    "bin": {
+        "csv-serve": "csv-serve"
+    },
+    "scripts": {
+        "start": "./csv-serve"
+    },
+    "keywords": [
+        "csv",
+        "koa",
+        "server"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/quick-sort/csv-serve.git"
+    },
+    "author": "quicksort",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/quick-sort/csv-serve/issues"
+    },
+    "homepage": "https://github.com/quick-sort/csv-serve#README.md",
+    "dependencies": {
+        "args": "^4.0.0",
+        "debug": "^3.1.0",
+        "detect-port": "^1.2.2",
+        "http-errors": "^1.6.3",
+        "koa": "^2.5.0",
+        "koa-csv": "^1.0.0"
+    }
+}
