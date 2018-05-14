@@ -30,6 +30,6 @@
         "detect-port": "^1.2.2",
         "http-errors": "^1.6.3",
         "koa": "^2.5.0",
-        "koa-csv": "^1.0.0"
+        "koa-csv": "^1.0.1"
     }
 }
